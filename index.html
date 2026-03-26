@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Freelance - Nom de la Boutique</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover no-repeat;
+    }
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: gold;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 15px 30px;
+      background: gold;
+      color: black;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ffd700;
+    }
+    section {
+      padding: 80px 40px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 36px;
+      color: gold;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card h3 {
+      color: gold;
+      margin-bottom: 15px;
+    }
+    .card p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      padding: 20px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    .price-card {
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid gold;
+    }
+    .price-card h3 {
+      color: gold;
+      margin-bottom: 15px;
+    }
+    .price-card p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .price-card .btn {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Nom de la Boutique</h2>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Réalisations</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Bienvenue CHEZ {NOM DE LA BOUTIQUE}</h1>
+  <p>Votre destination pour des produits de qualité et un service exceptionnel.<BR> {DESCRIPTION DE LA BOUTIQUE}</p>
+  <button class="btn">PROFITEZ DE NOS OFFRES</button>
+</section>
+
+<section id="services">
+  <h2>Nos Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Service 1</h3>
+      <p>Description courte du service.</p>
+    </div>
+    <div class="card">
+      <h3>Service 2</h3>
+      <p>Description courte du service.</p>
+    </div>
+    <div class="card">
+      <h3>Service 3</h3>
+      <p>Description courte du service.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Réalisations</h2>
+  <div class="cards">
+    <div class="card">Projet 1</div>
+    <div class="card">Projet 2</div>
+    <div class="card">Projet 3</div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <h2>Tarifs</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Offre 1</h3>
+      <p>Description de l'offre.</p>
+      <p>Prix</p>
+      <button class="btn">Payer maintenant</button>
+    </div>
+    <div class="price-card">
+      <h3>Offre 2</h3>
+      <p>Description de l'offre.</p>
+      <p>Prix</p>
+      <button class="btn">Payer maintenant</button>
+    </div>
+    <div class="price-card">
+      <h3>Offre 3</h3>
+      <p>Description de l'offre.</p>
+      <p>Prix</p>
+      <button class="btn">Payer maintenant</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contactez-nous</h2>
+  <p>Email : votre-email@exemple.com</p>
+  <p>Ou cliquez sur WhatsApp pour discuter immédiatement.</p>
+</section>
+
+<footer>
+  <p>© 2026 Nom de la Boutique - Tous droits réservés</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/votre-numero">📱</a>
+
+</body>
+</html>
