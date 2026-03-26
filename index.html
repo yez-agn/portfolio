@@ -3,136 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Freelance - Nom de la Boutique</title>
+  <title>Portfolio Freelance</title>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background: #0a0a0a;
-      color: #fff;
+      color: white;
     }
+
     header {
-      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px;
       background: #111;
+      position: relative;
     }
+
+    nav {
+      display: flex;
+    }
+
     nav a {
-      color: #fff;
-      margin: 0 15px;
+      color: white;
+      margin: 0 10px;
       text-decoration: none;
-      font-weight: bold;
     }
-    .hero {
+
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #111;
+        flex-direction: column;
+        display: none;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    section {
+      padding: 60px 20px;
       text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover no-repeat;
     }
-    .hero h1 {
-      font-size: 50px;
-      margin-bottom: 20px;
-      color: gold;
-    }
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
+
     .btn {
-      padding: 15px 30px;
+      padding: 10px 20px;
       background: gold;
       color: black;
       border: none;
       cursor: pointer;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
     }
-    .btn:hover {
-      background: #ffd700;
-    }
-    section {
-      padding: 80px 40px;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 36px;
-      color: gold;
-    }
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
+
     .card {
       background: #111;
-      padding: 30px;
-      border-radius: 15px;
-      transition: transform 0.3s;
+      padding: 20px;
+      border-radius: 10px;
     }
-    .card:hover {
-      transform: translateY(-10px);
-    }
-    .card h3 {
-      color: gold;
-      margin-bottom: 15px;
-    }
-    .card p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #111;
-    }
+
     .whatsapp {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
+      bottom: 20px;
+      right: 20px;
+      background: green;
       color: white;
-      padding: 20px;
+      padding: 15px;
       border-radius: 50%;
-      font-size: 24px;
       text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-    .price-card {
-      background: #111;
-      padding: 30px;
-      border-radius: 15px;
-      border: 2px solid gold;
-    }
-    .price-card h3 {
-      color: gold;
-      margin-bottom: 15px;
-    }
-    .price-card p {
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-    .price-card .btn {
-      width: 100%;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h2>Nom de la Boutique</h2>
-  <nav>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav id="nav-menu">
     <a href="#services">Services</a>
     <a href="#portfolio">Réalisations</a>
     <a href="#tarifs">Tarifs</a>
@@ -140,27 +112,18 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Bienvenue CHEZ {NOM DE LA BOUTIQUE}</h1>
-  <p>Votre destination pour des produits de qualité et un service exceptionnel.<BR> {DESCRIPTION DE LA BOUTIQUE}</p>
-  <button class="btn">PROFITEZ DE NOS OFFRES</button>
+<section>
+  <h1>Augmentez vos ventes</h1>
+  <p>Description principale ici</p>
+  <button class="btn">Commencer</button>
 </section>
 
 <section id="services">
-  <h2>Nos Services</h2>
+  <h2>Services</h2>
   <div class="cards">
-    <div class="card">
-      <h3>Service 1</h3>
-      <p>Description courte du service.</p>
-    </div>
-    <div class="card">
-      <h3>Service 2</h3>
-      <p>Description courte du service.</p>
-    </div>
-    <div class="card">
-      <h3>Service 3</h3>
-      <p>Description courte du service.</p>
-    </div>
+    <div class="card">Service 1</div>
+    <div class="card">Service 2</div>
+    <div class="card">Service 3</div>
   </div>
 </section>
 
@@ -169,45 +132,36 @@
   <div class="cards">
     <div class="card">Projet 1</div>
     <div class="card">Projet 2</div>
-    <div class="card">Projet 3</div>
   </div>
 </section>
 
 <section id="tarifs">
   <h2>Tarifs</h2>
-  <div class="pricing">
-    <div class="price-card">
-      <h3>Offre 1</h3>
-      <p>Description de l'offre.</p>
-      <p>Prix</p>
-      <button class="btn">Payer maintenant</button>
-    </div>
-    <div class="price-card">
-      <h3>Offre 2</h3>
-      <p>Description de l'offre.</p>
-      <p>Prix</p>
-      <button class="btn">Payer maintenant</button>
-    </div>
-    <div class="price-card">
-      <h3>Offre 3</h3>
-      <p>Description de l'offre.</p>
-      <p>Prix</p>
-      <button class="btn">Payer maintenant</button>
-    </div>
+  <div class="cards">
+    <div class="card">Offre 1</div>
+    <div class="card">Offre 2</div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contactez-nous</h2>
-  <p>Email : votre-email@exemple.com</p>
-  <p>Ou cliquez sur WhatsApp pour discuter immédiatement.</p>
+  <h2>Contact</h2>
+  <p>Email : exemple@mail.com</p>
 </section>
 
-<footer>
-  <p>© 2026 Nom de la Boutique - Tous droits réservés</p>
-</footer>
+<a class="whatsapp" href="#">W</a>
 
-<a class="whatsapp" href="https://wa.me/votre-numero">📱</a>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  });
+</script>
 
 </body>
 </html>
